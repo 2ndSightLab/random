@@ -78,3 +78,8 @@ while read p; do
   echo "$p"
 done <file.txt
 ```
+
+#netcat listener
+```
+nc -l <port>
+```
