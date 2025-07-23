@@ -18,3 +18,40 @@ curl -s "https://crt.sh/?q=%.$domain&output=json" | jq -r '.[].common_name’. |
 ```
 xargs -a domains.txt dig +short A
 ```
+
+# Install dig in AWS CloudShell
+
+```
+sudo yum install bind-utils
+```
+
+# Wipe out git history (dangerous)
+```
+git checkout --orphan new_master
+git add -A
+git commit -m "Initial commit"
+git branch -D main
+git branch -m main
+git push -f origin main
+```
+
+# Test if xrdp has access to certificate you want to use
+```
+sudo -u xrdp cat /etc/xrdp/ssl/certificate.pem > /dev/null && echo "Certificate readable" || echo "Certificate NOT readable"
+sudo -u xrdp cat /etc/xrdp/ssl/private-nopass.pem > /dev/null && echo "Key readable" || echo "Key NOT readable"
+```
+
+# Securely delete a file on linux
+```
+sudo shred -u /file.txt
+```
+
+# Look at the top 4 rows of hex in a file
+```
+hexdump -C file.txt | head -n 5
+```
+
+# View a live stream of ALL commits to ANY public git repo. Yes really.
+```
+curl https://api.github.com/events
+```
