@@ -65,7 +65,7 @@ curl https://api.github.com/events
 create a valid 3.0 open api spec with correct syntax and formatting, no other errors, and no missing or extra elements. Use [ ] for the base URL. Use [value] as the example for the [field]. Do not add content node to 200. Do not use any prior prompts only base it on this description:
 ```
 
-# xrdp install - add repo (except I don't think I actually used this or it didn't work. Can't remember
+# xrdp install - add repo (except I don't think I actually used this. The AWS repo worked fine.)
 ```
 sudo add-apt-repository ppa:xrdp/xrdp
 sudo apt update
