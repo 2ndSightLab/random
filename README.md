@@ -79,7 +79,17 @@ while read p; do
 done <file.txt
 ```
 
-#netcat listener
+# netcat listener one port
 ```
 nc -l <port>
+```
+
+# netcat listender on port 80 and 443
+```
+for p in 80 443; do sudo nc -lvnp $p & done
+```
+
+# tcpdump listen to port 443 and 80
+```
+sudo tcpdump -i <interface> 'port 80 or port 443'
 ```
