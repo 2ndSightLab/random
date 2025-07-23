@@ -4,7 +4,11 @@ Random commands that might come in handy.
 
 # Tip: Use AI for sed commands, etc.
 
-I had some posts on useful sed commands and such but you're better off just using AI to formulate those commands. You have to get the prompt just right but generally you can get what you're seeking.
+I had some posts on useful sed commands and such but you're better off just using AI to formulate those commands. You have to get the prompt just right but generally you can get what you're seeking. Want to know how?
+
+https://medium.com/cloud-security/artificial-intelligence-2e97415216c0
+
+I got many of these commands using AI but the results are not consistent so adding here for future reference.
 
 # Get all the subdomains for a domain
 
