@@ -71,3 +71,10 @@ sudo add-apt-repository ppa:xrdp/xrdp
 sudo apt update
 sudo apt install xrdp
 ```
+
+# Loop through lines of file in bash
+```
+while read p; do
+  echo "$p"
+done <file.txt
+```
