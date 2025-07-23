@@ -91,5 +91,5 @@ for p in 80 443; do sudo nc -lvnp $p & done
 
 # tcpdump listen to port 443 and 80
 ```
-sudo tcpdump 'port 80 or port 443'
+sudo tcpdump 'port 80 or port 443' -nvt
 ```
