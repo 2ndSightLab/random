@@ -93,3 +93,13 @@ for p in 80 443; do sudo nc -lvnp $p & done
 ```
 sudo tcpdump 'port 80 or port 443' -nvt
 ```
+
+#install yq on Amazon Linux ARM
+```
+sudo wget -qO /usr/local/bin/yq https://github.com/mikefarah/yq/releases/latest/download/yq_linux_arm64
+chmod a+x /usr/local/bin/yq
+```
+# yq to parse a yaml file and show errors
+```
+yq . file.yaml
+```
