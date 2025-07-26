@@ -107,3 +107,17 @@ chmod a+x /usr/local/bin/yq
 ```
 yq . file.yaml
 ```
+
+# ran an AWS command that returns a lot of records or less and type ctrl-c instead of q and now nothign you print shows on screen
+```
+reset
+```
+
+# search in vi
+```
+<esc>:/search phrase <enter>
+```
+# clear a search
+```
+<esc>:noh</esc>
+```
