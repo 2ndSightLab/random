@@ -119,5 +119,9 @@ reset
 ```
 # clear a search
 ```
-<esc>:noh</esc>
+<esc>:noh
+```
+# go to end of line in vi
+```
+<esc><shift>$
 ```
