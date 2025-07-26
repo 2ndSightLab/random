@@ -14,7 +14,11 @@ I got many of these commands using AI but the results are not consistent so addi
 
 ```
 domain='2ndsightlab.com'
-curl -s "https://crt.sh/?q=%.$domain&output=json" | jq -r '.[].common_name’. | sort | uniq > domains.txt
+curl -s "https://crt.sh/?q=%.$domain&output=json" | \
+  jq -r '.[].common_name' | \
+  sed 's/\*\.//g' | \
+  sort | \
+  uniq > domains.txt
 ```
 
 # Get all the IP addresses for a list of domains in a text file
