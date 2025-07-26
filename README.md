@@ -108,7 +108,7 @@ chmod a+x /usr/local/bin/yq
 yq . file.yaml
 ```
 
-# ran an AWS command that returns a lot of records or less and type ctrl-c instead of q and now nothign you print shows on screen
+# ran an AWS command that returns a lot of records or less and type ctrl-c instead of q and now nothing you print shows on screen
 ```
 reset
 ```
