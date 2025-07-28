@@ -125,3 +125,15 @@ reset
 ```
 <esc><shift>$
 ```
+
+# disable and remove AWS SSM
+# you can also use these commands to stop and remove chrony if you happen to see multiple instances and ischat at the end of your SSH connection like I did
+```
+sudo systemctl stop amazon-ssm-agent
+sudo systemctl disable amazon-ssm-agent
+sudo yum remove amazon-ssm-agent  # For Amazon Linux/RHEL
+sudo apt-get remove amazon-ssm-agent # For Ubuntu/Debian
+```
+
+
+
