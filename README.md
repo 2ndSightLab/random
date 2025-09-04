@@ -131,16 +131,52 @@ reset
 sudo systemctl stop amazon-ssm-agent
 sudo systemctl disable amazon-ssm-agent
 ```
-# you can also use these commands to stop and remove chrony if you happen to see multiple instances and not clear why
+# stop and remove chrony if you happen to see multiple instances and not clear why
 ```
 sudo yum remove amazon-ssm-agent  # For Amazon Linux/RHEL
 sudo apt-get remove amazon-ssm-agent # For Ubuntu/Debian
 ```
-# burp browser won't open
+# burp browser won't open - permissions and ownership
+https://medium.com/bugs-that-bite/cant-open-burp-browser-12577802c839
 ```
 chromedir=ls ~/BurpSuitePro/burpbrowser/139.0.7258.127/
 cd $chromedir
 sudo chown root chrome-sandbox
 sudo chmod 4755 chrome-sandbox
+```
+# burp browser won't open - Missing xserver or $Display
+https://medium.com/bugs-that-bite/missing-xserver-or-display-d784ea3c2d36
+```
+xhost si:localuser:<username>
+```
+# can't open default browser on ubuntu ~ reinstall browsers and update icons to point to them 
+https://medium.com/bugs-that-bite/failed-to-execute-the-default-web-browser-on-aws-ubuntu-instance-running-xfce4-as-described-in-this-ef9dc43399a6
+https://medium.com/bugs-that-bite/cant-run-chromium-on-ubuntu-4db4f804543d
+
+```
+sudo apt install chromium-browser
+sudo apt install firefox
+```
+# login failed for display 0 on Ubuntu with xrdp 
+https://medium.com/bugs-that-bite/login-failed-for-display-0-675504a306a9
+https://medium.com/bugs-that-bite/connecting-to-sesman-ip-127-0-0-1-port-3350-login-failed-a4650d388fc0
+```
+# use the correct password - you had a typo
+# took me way too long to figure that out
+```
+#disable ipv6 on ubuntu when it's blocked and ubuntu won't update
+```
+vi /etc/default/grub
+#edit file to add this:
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash ipv6.disable=1"
+GRUB_CMDLINE_LINUX="ipv6.disable=1"
+#save file
+sudo update-grub
+sudo reboot
+```
+# remove conflicting chromium profile on Ubuntu
+```
+rm -f ~/snap/chromium/common/chromium/Singleton*
+rm -f ~/.config/chromium/Singleton*
 ```
 
