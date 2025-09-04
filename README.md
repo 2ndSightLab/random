@@ -127,13 +127,20 @@ reset
 ```
 
 # disable and remove AWS SSM
-# you can also use these commands to stop and remove chrony if you happen to see multiple instances and ischat at the end of your SSH connection like I did
 ```
 sudo systemctl stop amazon-ssm-agent
 sudo systemctl disable amazon-ssm-agent
+```
+# you can also use these commands to stop and remove chrony if you happen to see multiple instances and not clear why
+```
 sudo yum remove amazon-ssm-agent  # For Amazon Linux/RHEL
 sudo apt-get remove amazon-ssm-agent # For Ubuntu/Debian
 ```
-
-
+# burp browser won't open
+```
+chromedir=ls ~/BurpSuitePro/burpbrowser/139.0.7258.127/
+cd $chromedir
+sudo chown root chrome-sandbox
+sudo chmod 4755 chrome-sandbox
+```
 
