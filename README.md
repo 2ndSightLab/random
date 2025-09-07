@@ -236,7 +236,51 @@ git diff <commit> <commit>
 ```
 git reflog
 ```
-#do a dry run of a merge before changes
+#do a dry run of a merge before changes\
+#note that you'll get this error after asking you to commit changes before merging\
+#fatal: You have not concluded your merge (MERGE_HEAD exists).\
+#Please, commit your changes before you merge.\
+#git status will show somethign like:\
+#On branch main\
+#Your branch and 'origin/main' have diverged,\
+#and have 1 and 1 different commits each, respectively.\
+#  (use "git pull" if you want to integrate the remote branch with yours)\
+#\
+#All conflicts fixed but you are still merging.\
+#  (use "git commit" to conclude merge)\
+#Or abort...\
+#  (use "git merge --abort" to abort the merge)
 ```
 git merge --no-commit --no-ff origin/main
+```
+#abort a merge
+```
+git merge --abort
+```
+#to fix this error:\
+#git pull\
+#error: You have not concluded your merge (MERGE_HEAD exists).\
+#hint: Please, commit your changes before merging.\
+#fatal: Exiting because of unfinished merge.
+```
+git merge --abort
+```
+#then one of the following:
+#merge local and remote changes:
+```
+git config pull.rebase false
+```
+#replace your local changes with remote changes
+```
+git config pull.rebase true
+```
+#
+#git config pull.ff only is a safety setting that changes the default git pull from "merge everything" to "only merge if it's simple, otherwise stop and ask."
+#if divergent branches exist will stop and user will have to do a rebase to fix. This may keep logs cleaner but can be more confusing when there are no diffs only divergent branches.
+```
+git config pull.ff only
+```
+#unset pull ff
+```
+git config --unset pull.ff
 ```
