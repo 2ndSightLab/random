@@ -204,6 +204,10 @@ git log -p <branch>..origin/<branch>
 ```
 git log origin/<branch>..<branch>
 ```
+#view commit log  
+```
+git log --graph --oneline --decorate origin/<branch>..<branch>
+```
 #compare your branch with remote branch \
 #look for indented line followed by |/ on next line like: \
 #* 1a0d944 (HEAD -> main) comment1 \
@@ -214,7 +218,7 @@ git log origin/<branch>..<branch>
 #the indented commit comment2 is not in local directory \
 #if you have a divergent commit it can show unexpected diff output
 ```
-git log --graph --oneline --decorate origin/<branch>..<branch>
+git log --graph --onellog --graph --oneline --decorate --all
 ```
 #show what's in a specific commit
 #for examlpe from command above
