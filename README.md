@@ -204,14 +204,14 @@ git log -p <branch>..origin/<branch>
 ```
 git log origin/<branch>..<branch>
 ```
-#compare your branch with remote branch
-#look for indented line followed by |/ on next line like:
-#* 1a0d944 (HEAD -> main) comment1
-#| * 1824d2a (origin/main, origin/HEAD) comment2
-#|/ 
-#* 1a0d999 comment 3
-#branches share a common history up to comment3
-#the indented commit comment2 is not in local directory
+#compare your branch with remote branch \
+#look for indented line followed by |/ on next line like: \
+#* 1a0d944 (HEAD -> main) comment1 \
+#| * 1824d2a (origin/main, origin/HEAD) comment2 \
+#|/ \
+#* 1a0d999 comment 3 \
+#branches share a common history up to comment3 \
+#the indented commit comment2 is not in local directory \
 #if you have a divergent commit it can show unexpected diff output
 ```
 git log --graph --oneline --decorate origin/<branch>..<branch>
