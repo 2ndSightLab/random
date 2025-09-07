@@ -244,12 +244,12 @@ git reflog
 #On branch main\
 #Your branch and 'origin/main' have diverged,\
 #and have 1 and 1 different commits each, respectively.\
-#  (use "git pull" if you want to integrate the remote branch with yours)\
+# (use "git pull" if you want to integrate the remote branch with yours)\
 #\
 #All conflicts fixed but you are still merging.\
-#  (use "git commit" to conclude merge)\
+# (use "git commit" to conclude merge)\
 #Or abort...\
-#  (use "git merge --abort" to abort the merge)
+#(use "git merge --abort" to abort the merge)
 ```
 git merge --no-commit --no-ff origin/main
 ```
