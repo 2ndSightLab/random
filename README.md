@@ -236,3 +236,7 @@ git diff <commit> <commit>
 ```
 git reflog
 ```
+#do a dry run of a merge before changes
+```
+git merge --no-commit --no-ff origin/main
+```
