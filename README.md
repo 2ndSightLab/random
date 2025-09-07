@@ -179,4 +179,56 @@ sudo reboot
 rm -f ~/snap/chromium/common/chromium/Singleton*
 rm -f ~/.config/chromium/Singleton*
 ```
-
+#what branch you're on in git repo
+#replace <branch> in the commands below with local branch and remote branch (origin/<branch>)
+```
+git branch
+```
+#view changes not in your local dir
+```
+git log <branch>..origin/<branch>
+```
+#diff changes not in your local dir
+```
+git diff <branch>..origin/<branch>
+```
+#see commit status
+```
+git status
+```
+#diff what is loccal not in remote
+```
+git log -p <branch>..origin/<branch>
+```
+#view commit log
+```
+git log origin/<branch>..<branch>
+```
+#compare your branch with remote branch
+#look for indented line followed by |/ on next line like:
+#* 1a0d944 (HEAD -> main) comment1
+#| * 1824d2a (origin/main, origin/HEAD) comment2
+#|/ 
+#* 1a0d999 comment 3
+#branches share a common history up to comment3
+#the indented commit comment2 is not in local directory
+#if you have a divergent commit it can show unexpected diff output
+```
+git log --graph --oneline --decorate origin/<branch>..<branch>
+```
+#show what's in a specific commit
+#for examlpe from command above
+#git show1824d2a
+```
+git show <commit>
+```
+#compare two specific commits
+```
+git diff <commit> <commit>
+```
+#trying to figure out why can't commit when appears be no differences in local and remote
+# run this and look for any commit (amend), rebase, reset
+#If you find a rebase or amend in the recent history, it confirms that your commit history diverged from the remote, even if the final file contents are the same. For example, amending a commit changes its hash, making it a completely new commit from Git's perspective.
+```
+git reflog
+```
