@@ -247,7 +247,7 @@ git reflog
 #(use "git pull" if you want to integrate the remote branch with yours)\
 #\
 #All conflicts fixed but you are still merging.\
-# (use "git commit" to conclude merge)\
+#(use "git commit" to conclude merge)\
 #Or abort...\
 #(use "git merge --abort" to abort the merge)
 ```
